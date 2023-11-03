@@ -1,0 +1,351 @@
+/* Estilo Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Agbalumo', Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: goldenrod;
+    border: 0px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover, form .btn-enviar input:hover {
+    box-shadow: 0px 0px 8px gold;
+    transform: scale(1.05);
+}
+
+
+h2.titulo {
+    color: white;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: goldenrod;
+}
+
+/* Estilo Cabeçalho */
+
+header {
+    padding: 40px 4%;
+}
+
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover {
+    color: goldenrod;
+    transform: scale(1.07);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+/* Modificação fora da programação - Logo inicio */
+
+.interface .logo a img {
+    width: auto;
+    height: 80px;
+    border-radius: 50%;
+}
+
+/* CSS Inicio do Site */
+section.inicio {
+    padding: 25px 4%;
+}
+
+section.inicio .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 180px;
+}
+
+.inicio .txt-inicio h1 {
+    color: white;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.inicio .txt-inicio h1 span {
+    color: goldenrod;
+    font-size: 45px;
+}
+
+.inicio .txt-inicio p {
+    color: white;
+    margin: 40px 0;
+}
+
+.inicio .img-inicio img {
+    width: auto;
+    height: 760px;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+/* Código flutuar da imagem */
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+/* CSS Sobre */
+section.sobre {
+    padding: 80px 4%;
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .img-sobre img {
+    border-radius: 15px;
+}
+
+.sobre .txt-sobre {
+    color: white;
+}
+
+.sobre .txt-sobre h2 {
+    font-size: 40px;
+    line-height: 30px;
+    margin-bottom: 40px;
+}
+
+.sobre .txt-sobre h2 span {
+    color: goldenrod;
+    display: block;
+}
+
+.sobre .txt-sobre p {
+    margin: 10px 0;
+    text-align: justify;
+}
+
+.btn-social button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: goldenrod;
+    font-size: 17px;
+    cursor: pointer;
+    margin: 0 3px;
+    transition: .2s;
+}
+
+/* CSS Especialidades */
+section.work {
+    padding: 80px 4%;
+}
+
+section.work .flex {
+    gap: 60px;
+}
+
+.work .work-box {
+    color: white;
+    padding: 40px;
+    margin-top: 40px;
+    transition: .2s;
+}
+
+.work .work-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(218, 165, 32, 0.582);
+}
+
+.work .work-box i {
+    font-size: 65px;
+}
+
+.work .work-box h3 {
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+.work .work-box p {
+    padding: 20px 0;
+}
+
+/* CSS Portfólio */
+section.portfolio {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.062)
+}
+
+section.portfolio .flex {
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: .8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.port2 {
+    background-position: 0% 100%;
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+}
+
+.port2 {
+    background-position: 0% 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.301);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600px;
+    color: white;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+/* CSS Formulário */
+section.formulario {
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 40px;
+}
+
+form input, form textarea {
+    width: 100%;
+    background-color: rgba(58, 57, 57, 0.151);
+    border: none;
+    outline: none;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    max-height: 200px;
+}
+
+form input::placeholder{
+    color:grey
+}
+
+form .btn-enviar {
+    margin-top: 25px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: goldenrod;
+    color: black;
+    cursor: pointer;
+    font-weight: 700;
+    transition: .2s;
+}
+
+/* CSS Footer */
+footer {
+    padding: 20px 4%;
+    box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.062)
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer .flex .logo-footer img {
+    width: 70px;
+    height: auto;
+}
+
+footer .line-footer {
+    padding: 10px 0%;
+}
+
+footer .line-footer p i{
+    color: goldenrod;
+    font-size: 22px;
+}
+
+footer .line-footer p a{
+    color: white;
+}
+
+.line-footer{
+    border-bottom: 2px solid goldenrod;
+}
