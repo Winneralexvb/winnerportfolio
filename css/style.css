@@ -76,13 +76,47 @@ header a:hover {
     transform: scale(1.07);
 }
 
+/* AREA JS */
+
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+}
+
+header nav.fixed {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+header nav.fixed ul {
+    display: inline-block;
+}
+
+header nav.fixed ul li {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+
+/* AREA JS */
+
 header nav ul {
     list-style-type: none;
+    display: flex;
+    gap: 40px;
 }
 
 header nav ul li {
-    display: inline-block;
-    padding: 0 40px;
+    padding: 10px;
 }
 
 /* Modificação fora da programação - Logo inicio */
@@ -112,7 +146,7 @@ section.inicio .flex {
 
 .inicio .txt-inicio h1 span {
     color: #35b0f8;
-    font-size: 45px;
+    font-size: 42px;
 }
 
 .inicio .txt-inicio p {
