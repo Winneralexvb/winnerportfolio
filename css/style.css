@@ -140,7 +140,7 @@ section.inicio .flex {
 
 /* CSS Sobre */
 section.sobre {
-    padding: 80px 4%;
+    padding: 60px 4%;
 }
 
 section.sobre .flex {
@@ -221,7 +221,7 @@ section.work .flex {
 
 /* CSS Portfólio */
 section.portfolio {
-    padding: 80px 4%;
+    padding: 120px 4%;
     box-shadow: 0 0 40px 8px #A32B6B;
 }
 
