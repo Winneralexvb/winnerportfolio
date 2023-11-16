@@ -119,9 +119,21 @@ header nav ul li {
     padding: 10px;
 }
 
-/* Modificação fora da programação - Logo inicio */
+/* Modificação Logo inicio */
 
-.interface .logo a img {
+header .logo a ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .logo a ul li i {
+    color: goldenrod;
+    font-size: 22px;
+}
+
+header .logo a ul li img {
     width: auto;
     height: 80px;
     border-radius: 50%;
@@ -254,17 +266,17 @@ section.work .flex {
 }
 
 /* CSS Portfólio */
-section.portfolio {
+section.projetos {
     padding: 120px 4%;
     box-shadow: 0 0 40px 8px #A32B6B;
 }
 
-section.portfolio .flex {
+section.projetos .flex {
     justify-content: space-around;
     margin-top: 60px;
 }
 
-.img-port {
+.img-proj {
     width: 360px;
     height: 460px;
     background-size: cover;
@@ -275,12 +287,13 @@ section.portfolio .flex {
     position: relative;
 }
 
-.port2 {
+.proj2 {
     background-position: 0% 100%;
 }
 
-.img-port:hover {
+.img-proj:hover {
     background-position: 100% 100%;
+    transform: scale(1.05);
 }
 
 .overlay {
@@ -322,14 +335,15 @@ form {
 
 form input,
 form textarea {
-    width: 100%;
-    background-color: rgba(58, 57, 57, 0.151);
-    border: none;
-    outline: none;
-    padding: 20px 15px;
-    border-radius: 15px;
-    color: white;
-    font-size: 18px;
+  width: 100%;
+  background-color: rgba(58, 57, 57, 0.151);
+  border: none;
+  outline: none;
+  padding: 20px 15px;
+  border-radius: 15px;
+  color: white;
+  font-size: 18px;
+  transition: .9s;
 }
 
 form textarea {
@@ -339,6 +353,12 @@ form textarea {
 
 form input::placeholder {
     color: grey;
+}
+
+form input:focus-within,
+textarea:focus-within {
+  border: 1px solid #A32B6B;
+  transform: scale(1.02);
 }
 
 form .btn-enviar {
@@ -354,6 +374,11 @@ form .btn-enviar input {
     font-weight: 700;
     transition: .2s;
 }
+
+  form .btn-enviar input:hover {
+    box-shadow: 0px 0px 8px #A32B6B;
+    transform: scale(1.10);
+  }
 
 /* CSS Footer */
 footer {
