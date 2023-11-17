@@ -7,8 +7,9 @@
 }
 
 body {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     height: 100vh;
+    color: white;
 }
 
 html {
@@ -36,7 +37,8 @@ html {
     transition: .2s;
 }
 
-button:hover, form .btn-enviar input:hover {
+button:hover,
+form .btn-enviar input:hover {
     box-shadow: 0px 0px 8px #A32B6B;
     transform: scale(1.05);
 }
@@ -151,19 +153,20 @@ section.inicio .flex {
 }
 
 .inicio .txt-inicio h1 {
-    color: white;
-    font-size: 42px;
+    color: inherit;
+    font-size: 52px;
     line-height: 40px;
 }
 
 .inicio .txt-inicio h1 span {
     color: #35b0f8;
-    font-size: 42px;
+    font-size: 52px;
 }
 
 .inicio .txt-inicio p {
-    color: white;
-    margin: 40px 0;
+    font-size: 20px;
+    color: inherit;
+    margin: 30px 0px;
 }
 
 .inicio .img-inicio img {
@@ -199,12 +202,13 @@ section.sobre .flex {
 }
 
 .sobre .txt-sobre {
-    color: white;
+    color: inherit;
 }
 
 .sobre .txt-sobre h2 {
-    font-size: 40px;
-    line-height: 30px;
+    color: inherit;
+    font-size: 48px;
+    line-height: 34px;
     margin-bottom: 40px;
 }
 
@@ -214,7 +218,8 @@ section.sobre .flex {
 }
 
 .sobre .txt-sobre p {
-    margin: 10px 0;
+    font-size: 20px;
+    margin: 10px 0px;
     text-align: justify;
 }
 
@@ -240,7 +245,7 @@ section.work .flex {
 }
 
 .work .work-box {
-    color: white;
+    color: inherit;
     padding: 40px;
     margin-top: 40px;
     transition: .2s;
@@ -257,15 +262,18 @@ section.work .flex {
 }
 
 .work .work-box h3 {
+    color: inherit;
     font-size: 32px;
     margin: 15px 0;
 }
 
 .work .work-box p {
+    text-align: justify;
+    color: inherit;
     padding: 20px 0;
 }
 
-/* CSS Portfólio */
+/* CSS Projetos */
 section.projetos {
     padding: 120px 4%;
     box-shadow: 0 0 40px 8px #A32B6B;
@@ -335,15 +343,15 @@ form {
 
 form input,
 form textarea {
-  width: 100%;
-  background-color: rgba(58, 57, 57, 0.151);
-  border: none;
-  outline: none;
-  padding: 20px 15px;
-  border-radius: 15px;
-  color: white;
-  font-size: 18px;
-  transition: .9s;
+    width: 100%;
+    background-color: rgba(58, 57, 57, 0.151);
+    border: none;
+    outline: none;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 18px;
+    transition: .9s;
 }
 
 form textarea {
@@ -357,8 +365,8 @@ form input::placeholder {
 
 form input:focus-within,
 textarea:focus-within {
-  border: 1px solid #A32B6B;
-  transform: scale(1.02);
+    border: 1px solid #A32B6B;
+    transform: scale(1.02);
 }
 
 form .btn-enviar {
@@ -375,10 +383,10 @@ form .btn-enviar input {
     transition: .2s;
 }
 
-  form .btn-enviar input:hover {
+form .btn-enviar input:hover {
     box-shadow: 0px 0px 8px #A32B6B;
     transform: scale(1.10);
-  }
+}
 
 /* CSS Footer */
 footer {
@@ -387,6 +395,7 @@ footer {
 }
 
 footer .flex {
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -405,9 +414,176 @@ footer .line-footer p i {
 }
 
 footer .line-footer p a {
-    color: white;
+    color: inherit;
+    font-size: 18px;
 }
 
 .line-footer {
-    border-bottom: 2px solid #35b0f8;
+    border-bottom: 2px solid #A32B6B;
+}
+
+
+/* Mobile */
+@media screen and (max-width: 1020px) {
+
+    /* Caracteristicas Gerais */
+    .menu-nav {
+        display: none;
+    }
+
+    .btn-contato {
+        display: none;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+
+    /* Inicio do Site */
+    section.inicio {
+        padding: 20px 8%;
+    }
+
+    section.inicio .flex {
+        gap: 110px;
+        flex-direction: column-reverse;
+    }
+
+    .inicio .txt-inicio h1 {
+        font-size: 32px;
+        line-height: 10px;
+    }
+
+    .inicio .txt-inicio h1 span {
+        font-size: 32px;
+    }
+
+    .inicio .txt-inicio p {
+        margin: 20px 0px;
+    }
+
+    .inicio .img-inicio img {
+        height: 475px;
+    }
+
+
+    /* CSS Sobre */
+    section.sobre {
+        padding: 100px 8%;
+    }
+
+    section.sobre .flex {
+        gap: 40px;
+    }
+
+    .sobre .img-sobre img {
+        border-radius: 25px;
+    }
+
+    .sobre .txt-sobre {
+        text-align: center;
+    }
+
+    .sobre .txt-sobre h2 {
+        line-height: 35px;
+        margin-bottom: 20px;
+    }
+
+    .sobre .txt-sobre h2 span {
+        display: block;
+        font-size: 30px;
+    }
+
+    .sobre .txt-sobre p {
+        margin: 15px 0px;
+        text-align: justify;
+    }
+
+    .btn-social button {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+
+    /* CSS Especialidades */
+section.work {
+    padding: 100px 8%;
+}
+
+section.work .flex {
+    gap: 20px;
+}
+
+.work .work-box {
+    text-align: center;
+    border-radius: 15px;
+}
+
+.work .work-box i {
+    font-size: 80px;
+}
+
+.work .work-box h3 {
+    color: inherit;
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+.work .work-box p {
+    text-align: justify;
+    font-size: 18px;
+    padding: 30px 0;
+}
+
+
+/* CSS Projetos */
+section.projetos {
+    padding: 80px 8%;
+}
+
+section.projetos .flex {
+    justify-content: space-around;
+    margin-top: 60px;
+    gap: 80px;
+}
+
+.img-proj {
+    width: 310px;
+    height: 410px;
+    border-radius: 30px;
+}
+
+.overlay {
+    border-radius: 30px;
+}
+
+
+/* CSS FORMULARIO */
+
+/* FIM CSS FORMULARIO */
+
+
+/* CSS Footer */
+footer {
+    padding: 20px 8%;
+}
+
+footer .flex {
+    flex-direction: row;
+}
+
+footer .line-footer {
+    padding: 0px;
+}
+
+
+.line-footer {
+    border-bottom: 2px solid #A32B6B;
+}
+
+
+
+
+
 }
