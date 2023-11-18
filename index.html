@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/index.js"></script>
+    <script src="js/menumobile.js" defer></script>
     <title>Portfólio Winner Alex</title>
     <link href="images/apolofull.jpg" rel="icon" type="image/x-icon">
     <!-- Fonte Google -->
@@ -23,8 +24,11 @@
             <div class="logo"> <!--Inicio Logo-->
                 <a href="https://winneralexvb.github.io/portfolioapolo/">
                     <ul>
-                    <li><i class="bi bi-arrow-bar-left"></i></li>
-                    <li><img src="images/apoloicon.png" alt=""></li>
+                        <li><i class="bi bi-arrow-bar-left"></i></li>
+                        <li><img src="images/apoloicon.png" alt=""></li>
+                        <li>
+                            <h2 class="voltar">Voltar à <span>Apolo Portfólios</span></h2>
+                        </li>
                     </ul>
                 </a>
             </div> <!-- Fim da logo -->
@@ -37,11 +41,47 @@
                 </ul>
             </nav><!--Fim Navegação-->
             <div class="btn-contato">
+                <button class="darkbutton" onclick="darkmode()"><i class="bi bi-moon-stars-fill"></i></button>
                 <a href="#formulario">
-                    <button>Contato</button>
+                    <button class="contato">Contato</button>
                 </a>
             </div> <!-- Fim Botão Contato-->
+            <!-- Botão Abrir menu mobile -->
+            <div class="btn-abrir" id="abrir">
+                <i class="bi bi-chevron-double-left"></i>
+            </div>
+
         </div> <!-- Fim do Menu Navegação -->
+
+        <!-- Inicio Menu Mobile -->
+        <div class="navmobile" id="navmobile">
+            <!-- Botão Fechar -->
+            <div class="btn-fechar" id="fechar">
+                <i class="bi bi-chevron-double-right"></i>
+            </div>
+
+            <!-- Conteúdo Menu de Navegação -->
+            <nav>
+                <ul>
+                    <li><a href="#topo">Ir para o topo</a></li>
+                    <li><a href="#sobre">Sobre Mim</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                </ul>
+                <div class="btn-dark">
+                    <button class="darkbutton" onclick="darkmode()"><i class="bi bi-moon-stars-fill"></i></button>
+                    <a href="#formulario">
+                        <button class="contato">Contato</button>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <!-- Fim menu Mobile -->
+        <div class="overlay-mobile" id="overlay-mobile"></div>
+
+        <div class="toposite" id="toposite">
+            <a href="#topo"><button class="btn-topo"><i class="bi bi-arrow-up-circle-fill"></i></button></a>
+        </div>
     </header> <!-- Fim da Header -->
 
     <main>
@@ -59,7 +99,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="img-inicio">    <!-- 480 x 584 -->
+                    <div class="img-inicio"> <!-- 480 x 584 -->
                         <img src="images/img-inicio.png" alt="">
                     </div>
                 </div>
@@ -128,17 +168,17 @@
             <div class="interface">
                 <h2 class="titulo">Meus <span>Projetos.</span></h2>
                 <div class="flex">
-                    <a href="#">       <!-- Link Projeto 1 -->
-                    <div class="img-proj" style="background-image: url(images/apolocover.jpg);">
-                        <div class="overlay">Projeto 1</div>
-                    </div>
+                    <a href="#"> <!-- Link Projeto 1 -->
+                        <div class="img-proj" style="background-image: url(images/apolocover.jpg);">
+                            <div class="overlay">Projeto 1</div>
+                        </div>
                     </a>
-                    <a href="https://winneralexvb.github.io/portfolioapolo/">   <!-- Link Projeto 2 -->
+                    <a href="https://winneralexvb.github.io/portfolioapolo/"> <!-- Link Projeto 2 -->
                         <div class="img-proj proj2" style="background-image: url(images/apolofull.jpg);">
                             <div class="overlay">Apolo Portfólios</div>
                         </div>
                     </a>
-                    <a href="#">    <!-- Link Projeto 3 -->
+                    <a href="#"> <!-- Link Projeto 3 -->
                         <div class="img-proj" style="background-image: url(images/apolocover.jpg);">
                             <div class="overlay">Projeto 3</div>
                         </div>
@@ -169,7 +209,8 @@
             <div class="line-footer">
                 <div class="flex">
                     <div class="logo-footer">
-                        <a href="https://winneralexvb.github.io/portfolioapolo/"><img src="images/apoloicon.png" alt=""></a>
+                        <a href="https://winneralexvb.github.io/portfolioapolo/"><img src="images/apoloicon.png"
+                                alt=""></a>
                     </div>
                     <div class="btn-social">
                         <a href="https://www.instagram.com/winneralexvb/" target="blank"><button><i

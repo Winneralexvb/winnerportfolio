@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     height: 100vh;
     color: white;
 }
@@ -17,6 +17,31 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Darkmode */
+
+.dark-mode {
+    background-color: rgb(243, 220, 191);
+    color: black;
+  }
+
+  .btn-contato .darkbutton {
+    font-size: 15px;
+    padding: 10px 15px;
+    color: black;
+    background-color:#A32B6B;
+    border: 0px;
+    border-radius: 25px;
+    transition: .2s;
+    cursor: pointer
+}
+
+.darkbutton:hover {
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Fim Darkmode */
+
 .interface {
     max-width: 1280px;
     margin: 0 auto;
@@ -24,6 +49,12 @@ html {
 
 .flex {
     display: flex;
+}
+
+.btn-contato{
+    gap:10px;
+    display: flex;
+    flex-direction: row;
 }
 
 .btn-contato button {
@@ -37,7 +68,7 @@ html {
     transition: .2s;
 }
 
-button:hover,
+.btn-contato button:hover, .btn-dark button:hover,
 form .btn-enviar input:hover {
     box-shadow: 0px 0px 8px #A32B6B;
     transform: scale(1.05);
@@ -45,7 +76,7 @@ form .btn-enviar input:hover {
 
 
 h2.titulo {
-    color: white;
+    color: inherit;
     font-size: 38px;
     text-align: center;
 }
@@ -53,6 +84,7 @@ h2.titulo {
 h2.titulo span {
     color: #A32B6B;
 }
+
 
 /* Estilo Cabeçalho */
 
@@ -66,62 +98,18 @@ header>.interface {
     justify-content: space-between;
 }
 
-header a {
-    color: white;
+/* Modificação Logo inicio */
+
+header .logo a {
+    color: inherit;
     text-decoration: none;
     display: inline-block;
     transition: .2s;
 }
 
-header a:hover {
-    color: #A32B6B;
+header .logo a:hover {
     transform: scale(1.07);
 }
-
-/* AREA JS */
-
-
-header nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    position: relative;
-    z-index: 1000;
-}
-
-header nav.fixed {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    text-align: center;
-}
-
-header nav.fixed ul {
-    display: inline-block;
-}
-
-header nav.fixed ul li {
-    display: inline-block;
-    padding: 10px 20px;
-}
-
-
-/* AREA JS */
-
-header nav ul {
-    list-style-type: none;
-    display: flex;
-    gap: 40px;
-}
-
-header nav ul li {
-    padding: 10px;
-}
-
-/* Modificação Logo inicio */
 
 header .logo a ul {
     list-style-type: none;
@@ -132,14 +120,200 @@ header .logo a ul {
 
 header .logo a ul li i {
     color: goldenrod;
-    font-size: 22px;
+    font-size: 28px;
 }
 
 header .logo a ul li img {
     width: auto;
     height: 80px;
-    border-radius: 50%;
 }
+
+header .logo h2.voltar {
+    color: inherit;
+    font-size: 14px;
+    text-align: center;
+}
+
+header .logo h2.voltar span {
+    font-size: 14px;
+    color: #A32B6B;
+}
+
+
+/* Menu de Navegação */
+
+header nav.menu-nav a {
+    color: inherit;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.menu-nav a:hover {
+    color: #A32B6B;
+    transform: scale(1.07);
+}
+
+/* AREA JS */
+
+
+header nav.menu-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+}
+
+header nav.menu-nav.fixed {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+header nav.menu-nav.fixed ul {
+    display: inline-block;
+}
+
+header nav.menu-nav.fixed ul li {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+
+/* FIM AREA JS */
+
+header nav.menu-nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+}
+
+header nav.menu-nav ul li {
+    padding: 10px;
+}
+
+
+
+/* Inicio Menu Mobile */
+
+/* JS */
+.navmobile.abrir-menu {
+    width: 45vw;
+}
+
+.navmobile.abrir-menu~.overlay-mobile {
+    display: block;
+}
+
+/* Fim JS */
+
+.btn-abrir i {
+    display: none;
+    color: #A32B6B;
+    font-size: 30px;
+}
+
+.navmobile .btn-fechar {
+    padding: 10px 4%;
+}
+
+.navmobile .btn-fechar i {
+    color: #A32B6B;
+    font-size: 40px;
+}
+
+.navmobile {
+    background-color: rgba(0, 0, 0, 0.945);
+    width: 0vw;
+    height: 100vh;
+    position: fixed;
+    display: hidden;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.navmobile nav ul {
+    list-style-type: none;
+    text-align: right;
+}
+
+.navmobile nav ul li a {
+    padding: 20px 6%;
+    color: white;
+    text-decoration: none;
+    transition: .2s;
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    transition: .2s;
+}
+
+.navmobile nav ul li a:hover {
+    color: #A32B6B;
+    transform: scale(1.08);
+}
+
+.overlay-mobile {
+    background-color: rgba(0, 0, 0, 0.966);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 888;
+}
+
+.navmobile nav ul li a button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: inherit;
+    background-color: #A32B6B;
+    border: 0px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* Fim Menu Mobile */
+
+/* Botão Topo */
+
+header .toposite button{
+    position: fixed;
+    display: none;
+    color: #A32B6B;
+    font-size: 40px;
+    font-weight: 500;
+    background-color: inherit;
+    border: 0px;
+    cursor: pointer;
+    transition: .2s;
+    right: 30px;
+    bottom: 15px;
+    z-index: 999;
+}
+
+header .toposite button:hover {
+    transform: scale(1.12);
+    color: #35b0f8;
+}
+
+/* js botao topo */
+header .toposite.fixed button{
+    display: block;
+}
+
 
 /* CSS Inicio do Site */
 section.inicio {
@@ -427,7 +601,7 @@ footer .line-footer p a {
 @media screen and (max-width: 1020px) {
 
     /* Caracteristicas Gerais */
-    .menu-nav {
+    header nav.menu-nav {
         display: none;
     }
 
@@ -437,6 +611,73 @@ footer .line-footer p a {
 
     .flex {
         flex-direction: column;
+    }
+
+    /* Menu de Navegação Mobile */
+    .btn-abrir i {
+        display: block;
+    }
+
+    .navmobile {
+        display: block;
+    }
+
+    .btn-dark{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+    
+    .btn-dark button {
+        padding: 10px 20px;
+        color: black;
+        margin-top: 10vh;
+        font-size: 14px;
+        font-weight: 500;
+        background-color: #A32B6B;
+        border: 0px;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: .2s;
+    }
+
+    /* Botão topo */
+    header .toposite button{
+    right:10px;
+    bottom:10px;
+    }
+
+
+    /* Fim Menu Mobile */
+
+    header .logo a {
+        display: inline;
+    }
+
+    header .logo a:hover {
+        transform: scale(1.07);
+    }
+
+
+    header .logo a ul li i {
+        color: goldenrod;
+        font-size: 24px;
+    }
+
+    header .logo a ul li img {
+        width: auto;
+        height: 65px;
+    }
+
+    header .logo h2.voltar {
+        font-size: 12px;
+        max-width: 65px;
+        max-height: 65px;
+    }
+
+    header .logo h2.voltar span {
+        font-size: 12px;
+        color: #A32B6B;
     }
 
 
@@ -507,80 +748,80 @@ footer .line-footer p a {
 
 
     /* CSS Especialidades */
-section.work {
-    padding: 100px 8%;
-}
+    section.work {
+        padding: 100px 8%;
+    }
 
-section.work .flex {
-    gap: 20px;
-}
+    section.work .flex {
+        gap: 20px;
+    }
 
-.work .work-box {
-    text-align: center;
-    border-radius: 15px;
-}
+    .work .work-box {
+        text-align: center;
+        border-radius: 15px;
+    }
 
-.work .work-box i {
-    font-size: 80px;
-}
+    .work .work-box i {
+        font-size: 80px;
+    }
 
-.work .work-box h3 {
-    color: inherit;
-    font-size: 28px;
-    margin: 15px 0;
-}
+    .work .work-box h3 {
+        color: inherit;
+        font-size: 28px;
+        margin: 15px 0;
+    }
 
-.work .work-box p {
-    text-align: justify;
-    font-size: 18px;
-    padding: 30px 0;
-}
-
-
-/* CSS Projetos */
-section.projetos {
-    padding: 80px 8%;
-}
-
-section.projetos .flex {
-    justify-content: space-around;
-    margin-top: 60px;
-    gap: 80px;
-}
-
-.img-proj {
-    width: 310px;
-    height: 410px;
-    border-radius: 30px;
-}
-
-.overlay {
-    border-radius: 30px;
-}
+    .work .work-box p {
+        text-align: justify;
+        font-size: 18px;
+        padding: 30px 0;
+    }
 
 
-/* CSS FORMULARIO */
+    /* CSS Projetos */
+    section.projetos {
+        padding: 80px 8%;
+    }
 
-/* FIM CSS FORMULARIO */
+    section.projetos .flex {
+        justify-content: space-around;
+        margin-top: 60px;
+        gap: 80px;
+    }
+
+    .img-proj {
+        width: 310px;
+        height: 410px;
+        border-radius: 30px;
+    }
+
+    .overlay {
+        border-radius: 30px;
+    }
 
 
-/* CSS Footer */
-footer {
-    padding: 20px 8%;
-}
+    /* CSS FORMULARIO */
 
-footer .flex {
-    flex-direction: row;
-}
-
-footer .line-footer {
-    padding: 0px;
-}
+    /* FIM CSS FORMULARIO */
 
 
-.line-footer {
-    border-bottom: 2px solid #A32B6B;
-}
+    /* CSS Footer */
+    footer {
+        padding: 20px 8%;
+    }
+
+    footer .flex {
+        flex-direction: row;
+    }
+
+    footer .line-footer {
+        padding: 0px;
+    }
+
+
+    .line-footer {
+        border-bottom: 2px solid #A32B6B;
+    }
 
 
 
