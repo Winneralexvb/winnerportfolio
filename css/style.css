@@ -155,9 +155,6 @@ header nav.menu-nav a:hover {
     transform: scale(1.07);
 }
 
-/* AREA JS */
-
-
 header nav.menu-nav {
     display: flex;
     align-items: center;
@@ -166,27 +163,6 @@ header nav.menu-nav {
     position: relative;
     z-index: 1000;
 }
-
-header nav.menu-nav.fixed {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    text-align: center;
-}
-
-header nav.menu-nav.fixed ul {
-    display: inline-block;
-}
-
-header nav.menu-nav.fixed ul li {
-    display: inline-block;
-    padding: 10px 20px;
-}
-
-
-/* FIM AREA JS */
 
 header nav.menu-nav ul {
     list-style-type: none;
@@ -199,9 +175,39 @@ header nav.menu-nav ul li {
 }
 
 
+/* Area JS */
+header nav.menu-nav.fixed {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+header nav.menu-nav.fixed ul {
+    display: inline-block;
+    background-color: inherit;
+    border-radius: 20px;
+}
+
+header nav.menu-nav.fixed ul li {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+header nav.menu-nav.fixed ul li a {
+    color: inherit;
+}
+
+header nav.menu-nav.fixed ul li a:hover {
+    color: #A32B6B;
+    transform: scale(1.07);
+}
+/* FIM AREA JS */
+
 
 /* Inicio Menu Mobile */
-
 /* JS */
 .navmobile.abrir-menu {
     width: 45vw;
