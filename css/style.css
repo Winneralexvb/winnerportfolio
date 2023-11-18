@@ -302,6 +302,7 @@ header .toposite button{
     right: 30px;
     bottom: 15px;
     z-index: 999;
+    animation: flutuar2 2s ease-in-out infinite alternate;
 }
 
 header .toposite button:hover {
@@ -350,7 +351,7 @@ section.inicio .flex {
     animation: flutuar 2s ease-in-out infinite alternate;
 }
 
-/* Código flutuar da imagem */
+/* Códigos flutuantes */
 @keyframes flutuar {
     0% {
         top: 0;
@@ -358,6 +359,16 @@ section.inicio .flex {
 
     100% {
         top: 30px;
+    }
+}
+
+@keyframes flutuar2 {
+    0% {
+        bottom: 0;
+    }
+
+    100% {
+        bottom: 20px;
     }
 }
 
