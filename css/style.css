@@ -22,13 +22,13 @@ html {
 .dark-mode {
     background-color: rgb(243, 220, 191);
     color: black;
-  }
+}
 
-  .btn-contato .darkbutton {
+.btn-contato .darkbutton {
     font-size: 15px;
     padding: 10px 15px;
     color: black;
-    background-color:#A32B6B;
+    background-color: #A32B6B;
     border: 0px;
     border-radius: 25px;
     transition: .2s;
@@ -36,7 +36,7 @@ html {
 }
 
 .darkbutton:hover {
-    color: white;
+    color: rgb(243, 220, 191);
     transform: scale(1.05);
 }
 
@@ -51,8 +51,8 @@ html {
     display: flex;
 }
 
-.btn-contato{
-    gap:10px;
+.btn-contato {
+    gap: 10px;
     display: flex;
     flex-direction: row;
 }
@@ -68,13 +68,14 @@ html {
     transition: .2s;
 }
 
-.btn-contato button:hover, .btn-dark button:hover,
+.btn-contato button:hover,
+.btn-dark button:hover,
 form .btn-enviar input:hover {
     box-shadow: 0px 0px 8px #A32B6B;
     transform: scale(1.05);
 }
 
-.btn-social button:hover{
+.btn-social button:hover {
     transform: scale(1.3);
 
 }
@@ -209,6 +210,7 @@ header nav.menu-nav.fixed ul li a:hover {
     color: #A32B6B;
     transform: scale(1.07);
 }
+
 /* FIM AREA JS */
 
 
@@ -300,7 +302,7 @@ header nav.menu-nav.fixed ul li a:hover {
 
 /* Botão Topo */
 
-header .toposite button{
+header .toposite button {
     position: fixed;
     display: none;
     color: #A32B6B;
@@ -322,7 +324,7 @@ header .toposite button:hover {
 }
 
 /* js botao topo */
-header .toposite.fixed button{
+header .toposite.fixed button {
     display: block;
 }
 
@@ -439,7 +441,7 @@ section.work {
 section.work .flex {
     gap: 60px;
     flex-direction: row;
-    justify-content: space-around;    
+    justify-content: space-around;
 }
 
 .work .work-box {
@@ -597,7 +599,7 @@ footer {
 
 footer .flex {
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 footer .line-footer .flex .logo-footer img {
@@ -641,6 +643,13 @@ footer .line-footer p a {
     }
 
     /* Menu de Navegação Mobile */
+
+    .btn-abrir i.fixed {
+        position: fixed;
+        top: 20px;
+        right: 4%;
+    }
+
     .btn-abrir i {
         display: block;
     }
@@ -649,16 +658,19 @@ footer .line-footer p a {
         display: block;
     }
 
-    .btn-dark{
+    .btn-dark {
         display: flex;
         justify-content: space-evenly;
         flex-direction: row;
+        position: absolute;
+        bottom: 10px;
+        right: 6%;
+        gap: 5px;
     }
-    
+
     .btn-dark button {
         padding: 10px 20px;
         color: black;
-        margin-top: 10vh;
         font-size: 14px;
         font-weight: 500;
         background-color: #A32B6B;
@@ -669,14 +681,18 @@ footer .line-footer p a {
     }
 
     /* Botão topo */
-    header .toposite button{
-    right:10px;
-    bottom:10px;
-    font-size: 45px;
+    header .toposite button {
+        right: 10px;
+        bottom: 10px;
+        font-size: 45px;
     }
 
 
     /* Fim Menu Mobile */
+
+    header {
+        padding: 20px 4%;
+    }
 
     header .logo a {
         display: inline;
@@ -829,17 +845,14 @@ footer .line-footer p a {
     }
 
 
-    /* CSS FORMULARIO */
-
-    /* FIM CSS FORMULARIO */
-
-
     /* CSS Footer */
     footer {
         padding: 20px 8%;
+        padding-bottom: 40px;
     }
 
     footer .flex {
+        justify-content: space-around;
         flex-direction: row;
     }
 
@@ -853,7 +866,5 @@ footer .line-footer p a {
     }
 
 
-
-
-
+    /* Fim */
 }

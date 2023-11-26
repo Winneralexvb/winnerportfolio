@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     var navbar = document.querySelector("header nav.menu-nav");
-    var toposite = document.querySelector("header .toposite");    
+    var toposite = document.querySelector("header .toposite");
+    var btnabrir = document.querySelector(".btn-abrir i");
     var isScrolled = false;
 
     window.addEventListener("scroll", function () {
@@ -9,12 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
         if (scrollPosition > 70 && !isScrolled) {
             navbar.classList.add("scrolled");
             navbar.classList.add("fixed");
-            toposite.classList.add("fixed")
+            toposite.classList.add("fixed");
+            btnabrir.classList.add("fixed");
             isScrolled = true;
         } else if (scrollPosition <= 70 && isScrolled) {
             navbar.classList.remove("scrolled");
             navbar.classList.remove("fixed");
             toposite.classList.remove("fixed");
+            btnabrir.classList.remove("fixed");
             isScrolled = false;
         }
     });
