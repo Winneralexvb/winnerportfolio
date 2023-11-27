@@ -17,8 +17,8 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Darkmode */
 
+/* Darkmode */
 .dark-mode {
     background-color: rgb(243, 220, 191);
     color: black;
@@ -41,6 +41,7 @@ html {
 }
 
 /* Fim Darkmode */
+
 
 .interface {
     max-width: 1280px;
@@ -80,7 +81,6 @@ form .btn-enviar input:hover {
 
 }
 
-
 h2.titulo {
     color: inherit;
     font-size: 38px;
@@ -93,7 +93,6 @@ h2.titulo span {
 
 
 /* Estilo Cabeçalho */
-
 header {
     padding: 40px 4%;
 }
@@ -104,8 +103,8 @@ header>.interface {
     justify-content: space-between;
 }
 
-/* Modificação Logo inicio */
 
+/* Modificação Logo inicio */
 header .logo a {
     color: inherit;
     text-decoration: none;
@@ -147,7 +146,6 @@ header .logo h2.voltar span {
 
 
 /* Menu de Navegação */
-
 header nav.menu-nav a {
     color: inherit;
     font-size: 16px;
@@ -300,8 +298,8 @@ header nav.menu-nav.fixed ul li a:hover {
 
 /* Fim Menu Mobile */
 
-/* Botão Topo */
 
+/* Botão Topo */
 header .toposite button {
     position: fixed;
     display: none;
@@ -385,6 +383,7 @@ section.inicio .flex {
     }
 }
 
+
 /* CSS Sobre */
 section.sobre {
     padding: 60px 4%;
@@ -433,6 +432,7 @@ section.sobre .flex {
     transition: .2s;
 }
 
+
 /* CSS Especialidades */
 section.work {
     padding: 80px 4%;
@@ -475,6 +475,7 @@ section.work .flex {
     font-size: 20px;
     padding: 20px 0;
 }
+
 
 /* CSS Projetos */
 section.projetos {
@@ -528,6 +529,7 @@ section.projetos .flex {
 .overlay:hover {
     opacity: 1;
 }
+
 
 /* CSS Formulário */
 section.formulario {
@@ -591,6 +593,7 @@ form .btn-enviar input:hover {
     transform: scale(1.10);
 }
 
+
 /* CSS Footer */
 footer {
     padding: 20px 4%;
@@ -643,8 +646,8 @@ footer .line-footer p a {
         flex-direction: column;
     }
 
-    /* Menu de Navegação Mobile */
 
+    /* Menu de Navegação Mobile */
     .btn-abrir i.fixed {
         position: fixed;
         top: 20px;
@@ -687,10 +690,10 @@ footer .line-footer p a {
         bottom: 10px;
         font-size: 45px;
     }
-
-
     /* Fim Menu Mobile */
 
+
+    /* Cabeçalho Mobile */
     header {
         padding: 20px 4%;
     }
@@ -861,11 +864,8 @@ footer .line-footer p a {
         padding: 0px;
     }
 
-
     .line-footer {
         border-bottom: 2px solid #A32B6B;
     }
 
-    /* Fim */
-    /* Push update */
 }
