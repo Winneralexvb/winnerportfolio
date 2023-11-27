@@ -44,8 +44,8 @@ html {
 
 
 .interface {
-    max-width: 1280px;
-    margin: 0 auto;
+    max-width: 1240px;
+    margin: 0px auto;
 }
 
 .flex {
@@ -228,6 +228,7 @@ header nav.menu-nav.fixed ul li a:hover {
     display: none;
     color: #A32B6B;
     font-size: 30px;
+    z-index: 999;
 }
 
 .navmobile .btn-fechar {
@@ -240,7 +241,7 @@ header nav.menu-nav.fixed ul li a:hover {
 }
 
 .navmobile {
-    background-color: rgba(0, 0, 0, 0.945);
+    background-color: rgb(0, 0, 0);
     width: 0vw;
     height: 100vh;
     position: fixed;
@@ -274,7 +275,7 @@ header nav.menu-nav.fixed ul li a:hover {
 }
 
 .overlay-mobile {
-    background-color: rgba(0, 0, 0, 0.966);
+    background-color: rgba(0, 0, 0, 0.877);
     width: 100%;
     height: 100%;
     position: fixed;
@@ -351,8 +352,7 @@ section.inicio .flex {
 .inicio .txt-inicio p {
     font-size: 20px;
     color: inherit;
-    margin: 30px 0px;
-    max-width: 500px;
+    margin: 40px 0px;
 }
 
 .inicio .img-inicio img {
@@ -432,6 +432,10 @@ section.sobre .flex {
     transition: .2s;
 }
 
+.btn-social i {
+    color: black;
+}
+
 
 /* CSS Especialidades */
 section.work {
@@ -439,24 +443,22 @@ section.work {
 }
 
 section.work .flex {
-    gap: 60px;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .work .work-box {
     width: 306px;
-    height: 512px;
+    height: auto;
     color: inherit;
-    padding: 40px 40px;
-    margin-top: 40px;
+    padding: 40px;
+    margin-top: 45px;
     transition: .2s;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .work .work-box:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px #A32B6B;
+    box-shadow: 0 0 20px #A32B6B;
 }
 
 .work .work-box i {
@@ -479,7 +481,7 @@ section.work .flex {
 
 /* CSS Projetos */
 section.projetos {
-    padding: 120px 4%;
+    padding: 100px 4%;
     box-shadow: 0 0 40px 8px #A32B6B;
 }
 
@@ -514,13 +516,13 @@ section.projetos .flex {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.301);
+    background-color: rgba(0, 0, 0, 0.664);
     border-radius: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
-    font-weight: 600px;
+    font-size: 26px;
+    font-weight: 600;
     color: white;
     opacity: 0;
     transition: .5s;
@@ -642,10 +644,14 @@ footer .line-footer p a {
     }
 
     .flex {
-        align-items: center;
         flex-direction: column;
     }
 
+    h2.titulo {
+        font-size: 32px;
+        line-height: 28px;
+    }
+    
 
     /* Menu de Navegação Mobile */
     .btn-abrir i.fixed {
@@ -667,7 +673,7 @@ footer .line-footer p a {
         justify-content: space-evenly;
         flex-direction: row;
         position: absolute;
-        bottom: 10px;
+        bottom: 60px;
         right: 6%;
         gap: 5px;
     }
@@ -690,6 +696,7 @@ footer .line-footer p a {
         bottom: 10px;
         font-size: 45px;
     }
+
     /* Fim Menu Mobile */
 
 
@@ -708,7 +715,6 @@ footer .line-footer p a {
 
 
     header .logo a ul li i {
-        color: goldenrod;
         font-size: 24px;
     }
 
@@ -764,10 +770,14 @@ footer .line-footer p a {
 
     section.sobre .flex {
         gap: 40px;
+        
     }
 
     .sobre .img-sobre img {
+        width: 100%;
+        max-width: 360px;
         border-radius: 25px;
+        margin: 0px auto;
     }
 
     .sobre .txt-sobre {
@@ -792,20 +802,24 @@ footer .line-footer p a {
     .btn-social button {
         margin-top: 10px;
         font-size: 20px;
+        text-align: center;
     }
 
 
     /* CSS Especialidades */
     section.work {
-        padding: 100px 8%;
+        padding: 40px 8%;
     }
 
     section.work .flex {
-        gap: 20px;
+        align-items: center;
+        gap: 30px;
         flex-direction: column;
     }
 
     .work .work-box {
+        width: 100%;
+        max-width: 360px;
         text-align: center;
         border-radius: 15px;
     }
@@ -829,19 +843,18 @@ footer .line-footer p a {
 
     /* CSS Projetos */
     section.projetos {
-        padding: 80px 8%;
+        padding: 80px 4%;
     }
 
     section.projetos .flex {
-        justify-content: space-around;
-        margin-top: 60px;
-        gap: 80px;
+        gap: 60px;
     }
 
     .img-proj {
         width: 310px;
         height: 410px;
         border-radius: 30px;
+        margin: 0px auto;
     }
 
     .overlay {
@@ -856,16 +869,10 @@ footer .line-footer p a {
     }
 
     footer .flex {
-        justify-content: space-around;
         flex-direction: row;
     }
 
     footer .line-footer {
         padding: 0px;
     }
-
-    .line-footer {
-        border-bottom: 2px solid #A32B6B;
-    }
-
 }
