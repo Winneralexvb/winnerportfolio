@@ -639,6 +639,7 @@ footer .line-footer p a {
     }
 
     .flex {
+        align-items: center;
         flex-direction: column;
     }
 
