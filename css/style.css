@@ -190,6 +190,29 @@ header nav.menu-nav ul li {
     padding: 10px;
 }
 
+.btn-phone{
+    display: none;
+}
+
+.btn-phone.fixed {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    background-color: inherit;
+    border-radius: 20px;
+}
+
+.btn-phone i {
+    font-size: 15px;
+    color: white;
+    padding: 0px;
+    transition: .2s;
+}
+
+.btn-phone i:hover {
+    color: #A32B6B;
+    transform: scale(1.07);
+}
 
 /* Area JS */
 header nav.menu-nav.fixed {
