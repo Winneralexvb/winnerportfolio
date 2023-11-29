@@ -18,6 +18,18 @@ html {
 }
 
 
+/* Scrollbar */
+html ::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgba(0, 0, 0, 0.555);
+}
+
+html ::-webkit-scrollbar-thumb {
+    border-radius: 40px;
+    background: #A32B6B;
+}
+
+
 /* Darkmode */
 .dark-mode {
     background-color: rgb(243, 220, 191);
@@ -651,7 +663,7 @@ footer .line-footer p a {
         font-size: 32px;
         line-height: 28px;
     }
-    
+
 
     /* Menu de Navegação Mobile */
     .btn-abrir i.fixed {
@@ -770,7 +782,7 @@ footer .line-footer p a {
 
     section.sobre .flex {
         gap: 40px;
-        
+
     }
 
     .sobre .img-sobre img {
