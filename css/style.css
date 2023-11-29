@@ -673,9 +673,9 @@ footer .line-footer p a {
         justify-content: space-evenly;
         flex-direction: row;
         position: absolute;
-        bottom: 60px;
+        bottom: 80px;
         right: 6%;
-        gap: 5px;
+        gap: 10px;
     }
 
     .btn-dark button {
